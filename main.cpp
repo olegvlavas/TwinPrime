@@ -156,8 +156,10 @@ int main() {
 
    //2996863034895 * 2 ^ 1290000 / 6
     mpz_init(k);
+   
     //Start();
     mpz_set_str(k, "1000000", 10);
+   
     mpz_t Summ, Razn, k2;
     mpz_init_set_ui(k2, 0);
     mpz_init(mult);
@@ -179,7 +181,6 @@ int main() {
         if(res1 >= 1){
         //if (TestEasy(prost, Summ, Razn)) {
             int res2 = mpz_probab_prime_p(Summ, 5);
-            
             if (res2 >= 1) {
                 mpz_init_set_ui(step, 0);
                 RazlozSumm();
