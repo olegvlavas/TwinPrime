@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-o", "C:/ProjectPls/main.exe",
+                "C:/ProjectPls/main.cpp",
+                "-lgmp",
+                "-lgmpxx",
+                "-fopenmp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
