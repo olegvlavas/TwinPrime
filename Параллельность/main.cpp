@@ -34,8 +34,10 @@ void RazlozSumm(mpz_t mult1, mpz_t step1, FILE *file){ // summ = mult * 2^step +
 int main() {
    // 2996863034895 * 2 ^ 1290000 / 6
     mpz_init(k);
+  
     Start();
     //mpz_set_ui(k, 1000000);
+  
     //clock_t start = clock();
     FILE* file = fopen("out.txt", "w");
     FILE* file2 = fopen("score.txt", "w");
@@ -43,9 +45,6 @@ int main() {
         perror("File can't open");
         return 1;
     }
-
-    mpz_add_ui(k, k, 237);
-    mpz_add_ui(k, k, 500);
     int score = 0;
     while (true) { 
         #pragma omp parallel for   
