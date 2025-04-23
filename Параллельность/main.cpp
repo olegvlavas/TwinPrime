@@ -6,7 +6,6 @@
 using namespace std;   
   
 mpz_t k;
-//, step, mult;   
 void Start(){
     mpz_t base, exp;
     mpz_init(base);
@@ -61,21 +60,9 @@ int main() {
         mpz_mul_ui(mult1, k2, 6); //k*6   
         mpz_add_ui(Summ1, mult1, 1); // Summ = k*6+1   
         mpz_sub_ui(Razn1, mult1, 1); // Razn = k*6-1 
-        //#pragma omp parallel
-            //{
-            //#pragma omp sections
-            //{
-            //#pragma omp section
-            //{
                 res1 = mpz_probab_prime_p(Razn1, 5);
-            //}
-            //#pragma omp section
-            //{
         if(res1 >= 1){
                 res2 = mpz_probab_prime_p(Summ1, 5);
-            //}
-            //}
-            //}
         if (res2 >= 1){
             mpz_t step1;
             mpz_init_set_ui(step1, 0);
